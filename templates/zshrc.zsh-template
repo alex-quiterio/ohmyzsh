@@ -9,9 +9,13 @@ ZSH_THEME="aussiegeek"
 
 # Example aliases
 alias zshconfig="gedit ~/.zshrc"
-alias dbox="cd Dropbox"
-alias ckp="cd karma/current-project"
-alias labs="cd labs && ls -lar"
+alias dbox="cd $HOME/Dropbox"
+alias ckp="cd $HOME/karma/current-project"
+alias labs="cd $HOME/labs && ls -lar"
+alias ist="cd $HOME/ist && ls -lar"
+alias ssh-ist="ssh ist164714@sigma.ist.utl.pt"
+alias x="exit"
+alias off="sudo poweroff"
 
 # Set to this to use case-sensitive completion
 # CASE_SENSITIVE="true"
@@ -31,7 +35,7 @@ alias labs="cd labs && ls -lar"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git rails3 ruby rvm github heroku thor rake)
+plugins=(bundler git rails3 ruby rvm github heroku thor rake)
 
 source $ZSH/oh-my-zsh.sh
 

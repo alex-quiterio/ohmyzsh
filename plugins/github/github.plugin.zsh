@@ -68,3 +68,8 @@ exist_gh() { # [DIRECTORY]
 
 # End Functions #############################################################
 
+simple_commit() {
+    git add .
+    git commit
+    git push origin master
+}
