@@ -20,4 +20,4 @@ alias rsd='_rails_command server --debugger'
 alias devlog='tail -f log/development.log'
 alias rdm='rake db:migrate'
 alias rdr='rake db:rollback'
-alias test_app="bundle exec guard -i"
+alias rails-test="bundle exec guard -i"
