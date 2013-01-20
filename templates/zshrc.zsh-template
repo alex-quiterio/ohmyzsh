@@ -1,13 +1,13 @@
 # Path to your oh-my-zsh configuration.
 ZSH=$HOME/.oh-my-zsh
-
+export SUBLIME=$HOME/Documents/sublime
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
 ZSH_THEME="lambda"
 
-# Example aliases
+# My aliases
 alias zshconfig="gedit ~/.zshrc"
 alias dbox="cd $HOME/Dropbox"
 alias ckp="cd $HOME/karma/current-project"
@@ -17,6 +17,7 @@ alias karma="cd $HOME/karma && ls -lar"
 alias ssh-ist="ssh ist164714@sigma.ist.utl.pt"
 alias x="exit"
 alias off="sudo poweroff"
+alias slime="$SUBLIME/sublime_text . &"
 
 # Set to this to use case-sensitive completion
 # CASE_SENSITIVE="true"
@@ -36,8 +37,11 @@ alias off="sudo poweroff"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(bundler git rails3 ruby rvm github heroku thor rake)
+plugins=(bundler git rails3 ruby rvm github heroku thor rake sublime)
 
 source $ZSH/oh-my-zsh.sh
-
 # Customize to your needs...
+
+if [ ! -d "$DIRECTORY" ]; then
+    install_sublime
+fi
