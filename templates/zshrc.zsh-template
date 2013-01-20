@@ -42,6 +42,7 @@ plugins=(bundler git rails3 ruby rvm github heroku thor rake sublime)
 source $ZSH/oh-my-zsh.sh
 # Customize to your needs...
 
-if [ ! -d "$DIRECTORY" ]; then
-    install_sublime
+# checks if the sublime text editor is already installed on the system
+if [ ! -d "$SUBLIME" ]; then
+   install_sublime
 fi
