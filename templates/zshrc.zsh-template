@@ -17,7 +17,7 @@ alias karma="cd $HOME/karma && ls -lar"
 alias ssh-ist="ssh ist164714@sigma.ist.utl.pt"
 alias x="exit"
 alias off="sudo poweroff"
-alias slime="$SUBLIME/sublime_text . &"
+alias slime="$SUBLIME/sublime_text -n $@"
 
 # Set to this to use case-sensitive completion
 # CASE_SENSITIVE="true"
