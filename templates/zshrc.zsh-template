@@ -1,6 +1,6 @@
 # Path to your oh-my-zsh configuration.
 ZSH=$HOME/.oh-my-zsh
-export ANDROID_SDK=/home/alex-quiterio/Titanium/adt-bundle-linux-x86_64-20130729/sdk
+export ANDROID_SDK=$HOME/Titanium/adt-bundle-linux-x86_64-20130729/sdk
 export SUBLIME=$HOME/Documents/sublime
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
@@ -17,11 +17,12 @@ alias ist="cd $HOME/ist && ls -lar"
 alias karma="cd $HOME/karma && ls -lar"
 alias ssh-ist="ssh ist164714@sigma.ist.utl.pt"
 alias x="exit"
+alias v-up="vagrant up"
+alias v-ssh="vagrant ssh"
+alias v-off="vagrant halt"
 alias shermans="cd $HOME/karma/shermans && ls -lar -h"
 alias off="sudo poweroff"
 alias slime="$SUBLIME/sublime_text . &"
-alias v-up="vagrant up"
-alias v-ssh="vagrant ssh"
 alias adb="$ANDROID_SDK/platform-tools/adb"
 alias titanium="$HOME/Titanium/Titanium_Studio/TitaniumStudio"
 
