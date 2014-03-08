@@ -1,15 +1,10 @@
 ZSH=$HOME/.oh-my-zsh
-ZSH_THEME="lambda"
-
-export ANDROID_SDK=$HOME/Titanium/adt-bundle-linux-x86_64-20130729/sdk
-export SUBLIME=$HOME/Documents/sublime
+ZSH_THEME="crunch"
 
 # My aliases
-alias zshconfig="gedit ~/.zshrc"
+alias zshconfig="name ~/.zshrc"
 alias dbox="cd $HOME/Dropbox"
-alias ckp="cd $HOME/karma/current-project"
 alias labs="cd $HOME/labs && ls -lar"
-alias ist="cd $HOME/ist && ls -lar"
 alias karma="cd $HOME/karma && ls -lar"
 alias ssh-ist="ssh ist164714@sigma.ist.utl.pt"
 alias x="exit"
@@ -17,20 +12,13 @@ alias v-up="vagrant up"
 alias v-ssh="vagrant ssh"
 alias v-off="vagrant halt"
 alias shermans="cd $HOME/karma/shermans && ls -lar -h"
-alias off="sudo poweroff"
-alias slime="$SUBLIME/sublime_text . &"
-alias adb="$ANDROID_SDK/platform-tools/adb"
-alias titanium="$HOME/Titanium/Titanium_Studio/TitaniumStudio"
 
-plugins=(bundler git rails3 ruby rvm github heroku thor rake sublime)
+plugins=(git ruby github)
 source $ZSH/oh-my-zsh.sh
-
-
-# checks if the sublime text editor is already installed on the system
-if [ ! -d "$SUBLIME" ]; then
-   install_sublime
-fi
-export PATH=/home/alex-quiterio/.rvm/gems/ruby-1.9.3-p448/bin:/home/alex-quiterio/.rvm/gems/ruby-1.9.3-p448@global/bin:/home/alex-quiterio/.rvm/rubies/ruby-1.9.3-p448/bin:/home/alex-quiterio/.rvm/bin:/usr/lib/lightdm/lightdm:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games
 
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
+export PATH=/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin
+
+### rbenv configuration
+echo 'eval "$(rbenv init -)"'
