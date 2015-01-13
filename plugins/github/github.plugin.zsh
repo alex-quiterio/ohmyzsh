@@ -95,3 +95,8 @@ git.io() {curl -i -s http://git.io -F "url=$1" | grep "Location" | cut -f 2 -d "
 
 # End Functions #############################################################
 
+simple_commit() {
+    git add .
+    git commit
+    git push origin master
+}

@@ -1,0 +1,26 @@
+#!/bin/sh
+#
+# An example hook script to check the commit log message.
+# Called by "git commit" with one argument, the name of the file
+# that has the commit message.  The hook should exit with non-zero
+# status after issuing an appropriate message if it wants to stop the
+# commit.  The hook is allowed to edit the commit message file.
+#
+# To enable this hook, rename this file to "commit-msg".
+
+# Uncomment the below to add a Signed-off-by line to the message.
+# Doing this in a hook is a bad idea in general, but the prepare-commit-msg
+# hook is more suited to it.
+
+branch=$(git symbolic-ref --short HEAD) || ...
+trimmed_branch=$(echo $branch | sed -e 's/^\([^-]*-[^-]*\)-.*/\1/' -e \
+'y/abcdefghijklmnopqrstuvwxyz/ABCDEFGHIJKLMNOPQRSTUVWXYZ/')
+
+if [ -n "$trimmed_branch" ] && [ "$trimmed_branch" != "master" ]; then
+  OIFS="$IFS"
+  IFS='-'
+  read -a trello_ticket <<< "${trimmed_branch}"
+  IFS="$OIFS"
+  echo $trello_ticket
+  echo "[$trello_ticket] - $(cat $1)" > $1
+fi
