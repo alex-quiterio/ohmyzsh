@@ -12,17 +12,17 @@ Finally, you'll begin to get the sort of attention that you have always felt you
 
 To learn more, visit [ohmyz.sh](https://ohmyz.sh), follow [@ohmyzsh](https://twitter.com/ohmyzsh) on Twitter, and join us on [Discord](https://discord.gg/ohmyzsh).
 
-[![CI](https://github.com/ohmyzsh/ohmyzsh/workflows/CI/badge.svg)](https://github.com/ohmyzsh/ohmyzsh/actions?query=workflow%3ACI)
+[![CI](https://github.com/alex-quiterio/ohmyzsh/workflows/CI/badge.svg)](https://github.com/alex-quiterio/ohmyzsh/actions?query=workflow%3ACI)
 [![Follow @ohmyzsh](https://img.shields.io/twitter/follow/ohmyzsh?label=Follow+@ohmyzsh&style=flat)](https://twitter.com/intent/follow?screen_name=ohmyzsh)
 [![Discord server](https://img.shields.io/discord/642496866407284746)](https://discord.gg/ohmyzsh)
-[![Gitpod ready](https://img.shields.io/badge/Gitpod-ready-blue?logo=gitpod)](https://gitpod.io/#https://github.com/ohmyzsh/ohmyzsh)
+[![Gitpod ready](https://img.shields.io/badge/Gitpod-ready-blue?logo=gitpod)](https://gitpod.io/#https://github.com/alex-quiterio/ohmyzsh)
 
 ## Getting Started
 
 ### Prerequisites
 
 - A Unix-like operating system: macOS, Linux, BSD. On Windows: WSL2 is preferred, but cygwin or msys also mostly work.
-- [Zsh](https://www.zsh.org) should be installed (v4.3.9 or more recent is fine but we prefer 5.0.8 and newer). If not pre-installed (run `zsh --version` to confirm), check the following wiki instructions here: [Installing ZSH](https://github.com/ohmyzsh/ohmyzsh/wiki/Installing-ZSH)
+- [Zsh](https://www.zsh.org) should be installed (v4.3.9 or more recent is fine but we prefer 5.0.8 and newer). If not pre-installed (run `zsh --version` to confirm), check the following wiki instructions here: [Installing ZSH](https://github.com/alex-quiterio/ohmyzsh/wiki/Installing-ZSH)
 - `curl` or `wget` should be installed
 - `git` should be installed (recommended v2.4.11 or higher)
 
@@ -32,9 +32,9 @@ Oh My Zsh is installed by running one of the following commands in your terminal
 
 | Method    | Command                                                                                           |
 |:----------|:--------------------------------------------------------------------------------------------------|
-| **curl**  | `sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"` |
-| **wget**  | `sh -c "$(wget -O- https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"`   |
-| **fetch** | `sh -c "$(fetch -o - https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"` |
+| **curl**  | `sh -c "$(curl -fsSL https://raw.githubusercontent.com/alex-quiterio/ohmyzsh/master/tools/install.sh)"` |
+| **wget**  | `sh -c "$(wget -O- https://raw.githubusercontent.com/alex-quiterio/ohmyzsh/master/tools/install.sh)"`   |
+| **fetch** | `sh -c "$(fetch -o - https://raw.githubusercontent.com/alex-quiterio/ohmyzsh/master/tools/install.sh)"` |
 
 #### Manual inspection
 
@@ -43,7 +43,7 @@ that by downloading the install script first, looking through it so everything l
 then running it:
 
 ```shell
-wget https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh
+wget https://raw.githubusercontent.com/alex-quiterio/ohmyzsh/master/tools/install.sh
 sh install.sh
 ```
 
@@ -51,7 +51,7 @@ sh install.sh
 
 ### Plugins
 
-Oh My Zsh comes with a shitload of plugins for you to take advantage of. You can take a look in the [plugins](https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins) directory and/or the [wiki](https://github.com/ohmyzsh/ohmyzsh/wiki/Plugins) to see what's currently available.
+Oh My Zsh comes with a shitload of plugins for you to take advantage of. You can take a look in the [plugins](https://github.com/alex-quiterio/ohmyzsh/tree/master/plugins) directory and/or the [wiki](https://github.com/alex-quiterio/ohmyzsh/wiki/Plugins) to see what's currently available.
 
 #### Enabling Plugins
 
@@ -66,12 +66,13 @@ For example, this might begin to look like this:
 ```shell
 plugins=(
   git
-  bundler
+  node
   dotenv
   osx
   rake
   rbenv
   ruby
+  docker
 )
 ```
 
@@ -98,8 +99,8 @@ ZSH_THEME="robbyrussell"
 To use a different theme, simply change the value to match the name of your desired theme. For example:
 
 ```shell
-ZSH_THEME="agnoster" # (this is one of the fancy ones)
-# see https://github.com/ohmyzsh/ohmyzsh/wiki/Themes#agnoster
+ZSH_THEME="fox" # (this is one of the fancy ones)
+# see https://github.com/alex-quiterio/ohmyzsh/wiki/Themes#fox
 ```
 
 _Note: many themes require installing the [Powerline Fonts](https://github.com/powerline/fonts) in order to render properly._
@@ -121,7 +122,7 @@ And if you want to pick random theme from a list of your favorite themes:
 ```shell
 ZSH_THEME_RANDOM_CANDIDATES=(
   "robbyrussell"
-  "agnoster"
+  "lukerandall"
 )
 ```
 
@@ -194,7 +195,7 @@ REPO=apjanke/oh-my-zsh BRANCH=edge sh install.sh
 ##### 1. Clone the repository
 
 ```shell
-git clone https://github.com/ohmyzsh/ohmyzsh.git ~/.oh-my-zsh
+git clone https://github.com/alex-quiterio/ohmyzsh.git ~/.oh-my-zsh
 ```
 
 ##### 2. *Optionally*, backup your existing `~/.zshrc` file
